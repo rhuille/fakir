@@ -1,12 +1,34 @@
 
-d = document.getElementById("dynamics")
+
+var label = document.getElementById("label"),
+    numeric = document.getElementById("numeric"),
+    columnNamesInput = [];
+
+document.createElement("input")
 
 
+addNewLabelColumn= function(){
+    console.log("addNewLabelColumn")
 
+    var columnEntry = document.createElement("div");
+    numeric.appendChild(columnEntry)
 
-addNewColumn = function(){
-    console.log("addNewColumn")
+    var _ = document.createElement("input");
+    columnEntry.appendChild(_)
+    columnNamesInput.push(_)
+    _.setAttribute("placeholder", "Choose column name") 
+}
 
+addNewNumericColumn = function(){
+    console.log("addNewNumericColumn")
+
+    var columnEntry = document.createElement("div");
+    numeric.appendChild(columnEntry)
+
+    var _ = document.createElement("input");
+    columnEntry.appendChild(_)
+    columnNamesInput.push(_)
+    _.setAttribute("placeholder", "Choose column name") 
 }
 
 
