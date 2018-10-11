@@ -1,4 +1,6 @@
-
+var label = document.getElementById("label"),
+    numeric = document.getElementById("numeric"),
+    columnNamesInput = [];
 
 addNewLabelColumn= function(){
     console.log("addNewLabelColumn")
