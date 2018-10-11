@@ -62,5 +62,5 @@ var encodedUri = encodeURI(csvContent);
 var link = document.getElementById("link")
 link.setAttribute("href", encodedUri);
 link.setAttribute("download", "fakir_data.csv");
-link.innerHTML= "Click Here to download";
+link.innerHTML= "Download your fake data";
 
