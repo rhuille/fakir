@@ -2,10 +2,6 @@ var label = document.getElementById("label"),
     numeric = document.getElementById("numeric"),
     columnNamesInput = [];
 
-document.getElementById("labelButton").onclick = addNewLabelColumn;
-document.getElementById("numericButton").onclick = addNewNumericColumn;
-
-
 addNewLabelColumn= function(){
     console.log("addNewLabelColumn")
 
@@ -30,6 +26,8 @@ addNewNumericColumn = function(){
     _.setAttribute("placeholder", "Choose column name") 
 }
 
+document.getElementById("labelButton").onclick = addNewLabelColumn;
+document.getElementById("numericButton").onclick = addNewNumericColumn;
 
 //
 const rows = [["name1", "city1", "some other info"], ["name2", "city2", "more info"]];
