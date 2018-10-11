@@ -49,7 +49,6 @@ addNewNumericColumn = function(){
 
 }
 
-
 function product() {
   var args = Array.prototype.slice.call(arguments); // makes array from arguments
   return args.reduce(function tl (accumulator, value) {
@@ -64,25 +63,27 @@ function product() {
 }
 
 generateFakir = function(){
-    fakir = product()
-
+    fakir = product(labelsInput.map(function(e){return e.value.split("/")}))
     return fakir;
+}
+
+generateAndDownloadFakir = function(){
+
+    const rows = generateFakir();
+    let csvContent = "data:text/csv;charset=utf-8,";
+    rows.forEach(function(rowArray){
+    let row = rowArray.join(",");
+    csvContent += row + "\r\n";
+    }); 
+
+    var encodedUri = encodeURI(csvContent);
+    var link = document.createElement("link")
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", "fakir_data.csv");
+
+    link.click(); 
 }
 
 document.getElementById("labelButton").onclick = addNewLabelColumn;
 document.getElementById("numericButton").onclick = addNewNumericColumn;
-
-//
-const rows = [["name1", "city1", "some other info"], ["name2", "city2", "more info"]];
-let csvContent = "data:text/csv;charset=utf-8,";
-rows.forEach(function(rowArray){
-   let row = rowArray.join(",");
-   csvContent += row + "\r\n";
-}); 
-
-var encodedUri = encodeURI(csvContent);
-var link = document.getElementById("link")
-link.setAttribute("href", encodedUri);
-link.setAttribute("download", "fakir_data.csv");
-link.innerHTML= "Download your fake data";
-
+document.createElement("generateButton").onclick = generateAndDownloadFakir;
