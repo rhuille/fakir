@@ -2,6 +2,10 @@ var label = document.getElementById("label"),
     numeric = document.getElementById("numeric"),
     columnNamesInput = [];
 
+document.getElementById("labelButton").onclick = addNewLabelColumn;
+document.getElementById("numericButton").onclick = addNewNumericColumn;
+
+
 addNewLabelColumn= function(){
     console.log("addNewLabelColumn")
 
