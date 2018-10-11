@@ -6,7 +6,7 @@ d = document.getElementById("dynamics")
 
 addNewColumn = function(){
     console.log("addNewColumn")
-    
+
 }
 
 
@@ -19,8 +19,8 @@ rows.forEach(function(rowArray){
 }); 
 
 var encodedUri = encodeURI(csvContent);
-var link = document.createElement("a");
+var link = document.getElementById("link")
 link.setAttribute("href", encodedUri);
 link.setAttribute("download", "fakir_data.csv");
 link.innerHTML= "Click Here to download";
-document.body.appendChild(link); 
+
