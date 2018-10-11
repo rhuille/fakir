@@ -2,14 +2,19 @@
 <html>
 <body>
 
-<h1>My First Heading</h1>
+<h1>Fakir</h1>
 
-<p>My first paragraph.</p>
+<p>Simple and fast fake data generator</p>
 
 
 
+
+
+
+<p> Made with < 3 for Toucan Toco csm </p>
 
 <script>
+
 
 
 const rows = [["name1", "city1", "some other info"], ["name2", "city2", "more info"]];
@@ -20,13 +25,12 @@ rows.forEach(function(rowArray){
 }); 
 
 
-csvContent
 var encodedUri = encodeURI(csvContent);
 var link = document.createElement("a");
 link.setAttribute("href", encodedUri);
-link.setAttribute("download", "my_data.csv");
+link.setAttribute("download", "fakir_data.csv");
 link.innerHTML= "Click Here to download";
-// document.body.appendChild(link); // Required for FF
+document.body.appendChild(link); 
 
 </script>
 
