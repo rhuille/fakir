@@ -12,6 +12,11 @@ addNewLabelColumn= function(){
     columnEntry.appendChild(_)
     columnNamesInput.push(_)
     _.setAttribute("placeholder", "Choose column name") 
+
+    var _ = document.createElement("input");
+    _.setAttribute("cols", "100" )
+    columnEntry.appendChild(_)
+    _.setAttribute("placeholder", "Put here the list of your label") 
 }
 
 addNewNumericColumn = function(){
@@ -24,6 +29,22 @@ addNewNumericColumn = function(){
     columnEntry.appendChild(_)
     columnNamesInput.push(_)
     _.setAttribute("placeholder", "Choose column name") 
+
+    var _ = document.createElement("input");
+    _.setAttribute("type", "number")
+    columnEntry.appendChild(_)
+    _.setAttribute("placeholder", "Choose min value") 
+
+    var _ = document.createElement("input");
+    _.setAttribute("type", "number")
+    columnEntry.appendChild(_)
+    _.setAttribute("placeholder", "Choose max value") 
+
+    var _ = document.createElement("input");
+    _.setAttribute("type", "number")
+    columnEntry.appendChild(_)
+    _.setAttribute("placeholder", "precision") 
+
 }
 
 document.getElementById("labelButton").onclick = addNewLabelColumn;
