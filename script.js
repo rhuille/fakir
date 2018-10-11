@@ -49,8 +49,7 @@ addNewNumericColumn = function(){
 
 }
 
-function product() {
-  var args = Array.prototype.slice.call(arguments); // makes array from arguments
+function product(args) {
   return args.reduce(function tl (accumulator, value) {
     var tmp = [];
     accumulator.forEach(function (a0) {
@@ -77,10 +76,9 @@ generateAndDownloadFakir = function(){
     }); 
 
     var encodedUri = encodeURI(csvContent);
-    var link = document.createElement("link")
+    var link = document.createElement("a")
     link.setAttribute("href", encodedUri);
     link.setAttribute("download", "fakir_data.csv");
-
     link.click(); 
 }
 
