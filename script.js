@@ -14,7 +14,7 @@ addNewLabelColumn= function(){
     _.setAttribute("placeholder", "Choose column name") 
 
     var _ = document.createElement("textarea");
-    _.setAttribute("cols", "10000" )
+    _.setAttribute("cols", "1000" )
     columnEntry.appendChild(_)
     _.setAttribute("placeholder", "Put here the list of your label") 
 }
