@@ -63,6 +63,7 @@ function product(args) {
 
 generateFakir = function(){
     fakir = product(labelsInput.map(function(e){return e.value.split("/")}))
+    fakir.unshift(columnNamesInput.map(function(e){return e.value}) )
     return fakir;
 }
 
@@ -84,4 +85,4 @@ generateAndDownloadFakir = function(){
 
 document.getElementById("labelButton").onclick = addNewLabelColumn;
 document.getElementById("numericButton").onclick = addNewNumericColumn;
-document.createElement("generateButton").onclick = generateAndDownloadFakir;
+document.getElementById("generateButton").onclick = generateAndDownloadFakir;
