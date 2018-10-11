@@ -1,17 +1,10 @@
 
 
-var label = document.getElementById("label"),
-    numeric = document.getElementById("numeric"),
-    columnNamesInput = [];
-
-document.createElement("input")
-
-
 addNewLabelColumn= function(){
     console.log("addNewLabelColumn")
 
     var columnEntry = document.createElement("div");
-    numeric.appendChild(columnEntry)
+    label.appendChild(columnEntry)
 
     var _ = document.createElement("input");
     columnEntry.appendChild(_)
