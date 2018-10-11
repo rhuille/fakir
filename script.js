@@ -13,8 +13,8 @@ addNewLabelColumn= function(){
     columnNamesInput.push(_)
     _.setAttribute("placeholder", "Choose column name") 
 
-    var _ = document.createElement("input");
-    _.setAttribute("cols", "100" )
+    var _ = document.createElement("textarea");
+    _.setAttribute("cols", "10000" )
     columnEntry.appendChild(_)
     _.setAttribute("placeholder", "Put here the list of your label") 
 }
