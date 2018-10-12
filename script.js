@@ -77,8 +77,14 @@ addNewNumericColumn = function(){
     numericInput.push(_input)
 }
 
+ONE_MINUTE_IN_MILLIS=60000;
 
 addTimeToDate = function(date,increase,time){
+
+    if (time=='Min'){
+        date.setMinutes(date.getMinutes() + increase);
+        return date
+    }
 
     if (time=='Year'){
         date.setFullYear(date.getYear() + increase);
@@ -142,7 +148,7 @@ generateFakir = function(){
             var d = start;
             while(d < end){
                 dateInputValue.push(d)
-                d = addTimeToDate(d, 1, granularity)
+                d = addTimeToDate(d, parseFloat(document.getElementById("step").value), granularity)
             }
             labelsInputValue.push(dateInputValue.map(function(e){return format(e)}))
         }
