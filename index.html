@@ -2,18 +2,40 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
 </head>
 
 <body>
+    <div class="center">
     <h1>Fakir</h1>
-    <p>Simple and fast fake data generator</p>
-    <div id="label">Label column</div>
-    <button id='labelButton' type="button"> + Add a new label</button>
-    <div id="numeric">Numeric column</div>
-    <button id='numericButton' type="button"> + Add a new numeric value </button>
-    <br>
+    <p>Simple fake data generator</p>
+    </div>
+
+    <div id="date" class="columnInputContainer"> 
+        <span class="title">Date column <input id='dateCheckbox' type="checkbox" checked></input> </span> <br>
+        <div id='dateColumnEntry'>
+            Name of the column: <input id='dateCheckbox' class = 'columnNamesInput' value = 'Date'>  <br>
+            Start date : <input id='start' type="date">
+            End date : <input id='end' type="date"> <br>
+            Granularity : <select id="granularity"><option>Day</option><option>Month</option><option>Year</option></select> <br>
+            Format : <input id='format' placeholder="%Y-%m-%d">
+        </div>
+    </div>
+
+    <div class="columnInputContainer">
+        <span class="title">Label column <button id='labelButton' type="button"> + Add label</button></span><br><br><br>
+        <div id="label"></div>
+    </div>
+
+    <div class="columnInputContainer"> 
+        <span class="title">Numeric column <button id='numericButton' type="button"> + Add numeric value </button></span> <br><br>
+        <div id="numeric"></div>
+    </div>
+
+    <div class="center">
     <button id='generateButton' type="button"> Download fake data </button>
     <p> Made with <3 for Toucan Toco csm </p>
+    </div>
 </body>
 <script src="script.js"></script>
 </html>
