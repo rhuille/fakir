@@ -81,7 +81,7 @@ ONE_MINUTE_IN_MILLIS=60000;
 
 addTimeToDate = function(date,increase,time){
 
-    if (time=='Min'){
+    if (time=='Minutes'){
         date.setMinutes(date.getMinutes() + increase);
         return date
     }
